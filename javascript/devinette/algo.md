@@ -12,15 +12,15 @@ Tant que token < 6
 	Si answer n'est pas un nombre
 		answerInput()
 
-	Sinon si answer > solution
-		token ++
+	Sinon si answer > solution		
 		afficher "C'est moins"
 		answerInput()
+		token ++
 
 	Sinon si answer < solution
-		token ++
 		afficher "C'est plus"
 		answerInput()
+		token ++
 
 
 Si answer !== solution
