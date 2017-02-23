@@ -1,12 +1,14 @@
 var answer, token = 0
 
 fonction answerInput () 
+
 	answer = parseInt(prompt('Devinez le nombre'))
 
 
 answerInput()
 
 Tant que token < 6
+	
 	Si answer n'est pas un nombre
 		answerInput()
 
