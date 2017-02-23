@@ -11,7 +11,7 @@ console.log("Bienvenue dans ce jeu de devinette !");
 var solution = Math.floor(Math.random() * 100) + 1;
 
 // Décommentez temporairement cette ligne pour mieux vérifier le programme
-//console.log("(La solution est " + solution + ")");
+console.log("(La solution est " + solution + ")");
 
 // TODO : complétez le programme
 var answer, token=0;
@@ -20,21 +20,24 @@ function answerInput(){
 };
 
 answerInput();
+token ++;
 while (token < 6) {
     if (answer < solution) {
         if (answer == '' || isNaN(answer)) {
             answerInput();
         }
         alert('C\'est plus');
-        token ++;
-        console.log(token);
+
+        console.log(token + "coups joués");
         answerInput();
+        token ++;
                 
     } else if (answer > solution) {
         alert('C\'est moins');
-        token ++;
+
         answerInput();
-        console.log(token);
+        console.log(token + "coups joués");
+        token ++;
     } else {
         break
     }
@@ -45,6 +48,6 @@ if (token >= 6 && answer !== solution){
 }
 
 if (answer == solution ) {
-    alert('Vous avez trouvé! La réponse était: ' + solution);
+    alert('Vous avez trouvé en ' + token + ' coups! La réponse était: ' + solution);
 }
 
