@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                margin: 0;
+            }
+            #gauche {
+                float: left;
+                width: 70%;
+                height: 1000px;
+                background-color: #EFECCA;
+                padding-left: 20px;
+            }
+            #droite {
+                background-color: #CEFFF8;
+                height: 1000px;
+                padding : 10px;
+                padding-left: 71%;
+            }
+            hr {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            p input, p button {
+                margin-left: 20px;
+            }
+            .submit {
+                margin-left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gauche">
+        </div>
+        <div id="droite">
+            Utilisez ces boutons pour créer votre formulaire<br><br>
+            <button>Label</button>
+            <button>Zone de texte</button>
+            <button>Bouton</button>
+        </div>
+        <script src="jquery.js"></script>
+        <script>
+            $(function() {
+                
+                $('button:eq(0)').click(function() {
+                    // on supprime les éléments déjà présents afin d'éviter les affichages multiples     
+                    $('hr').remove();
+                    $('.content').remove();
+                    
+                    //on rajoute le contenu
+                    $('<hr><p class="content">Texte du label <input type"text" class="value"/> <button class="okButton">Ok</button></p>').appendTo('#droite');
+                    
+                    $('.okButton').click(function() {
+                        
+                        if($('.value').val()!=""){
+                          $('<p><span>' + $('.value').val() + '</span></p>').appendTo('#gauche');  
+                        }
+                        
+                        $('hr').remove();
+                        $('.content').remove();
+                        
+                    });
+                    
+                });
+                
+                $('button:eq(1)').click(function() {
+                    // on supprime les éléments déjà présents afin d'éviter les affichages multiples     
+                    $('hr').remove();
+                    $('.content').remove();
+                    
+                    //on rajoute le contenu
+                    $('<hr><p class="content">Id de la zone de texte <input type"text" class="value"/> <button class="okButton">Ok</button></p>').appendTo('#droite');  
+                    
+                    $('.okButton').click(function() {
+                        
+                        if($('.value').val()!=""){
+                          $('<input id="' + $('.value').val() + '" type="text" />').insertAfter('#gauche span:last');  
+                        }
+                        
+                        $('hr').remove();
+                        $('.content').remove();
+                        
+                    });
+                    
+                });
+                
+                $('button:eq(2)').click(function() {
+                    // on supprime les éléments déjà présents afin d'éviter les affichages multiples     
+                    $('hr').remove();
+                    $('.content').remove();
+                    
+                    //on rajoute le contenu
+                    $('<hr><p class="content">Texte du bouton <input type"text" class="value"/> <button class="okButton">Ok</button></p>').appendTo('#droite');
+                    
+                    $('.okButton').click(function() {
+                        
+                        if($('.value').val()!=""){
+                          $('<p><button class="submit">' + $('.value').val() + '</button></p>').appendTo('#gauche');  
+                        }
+                        
+                        $('hr').remove();
+                        $('.content').remove();
+                        
+                    });
+                });
+                
+                
+            });
+        </script>
+      
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---- C'est cette page qui m'a servi à générer la page index2.html qui, elle, contient le résultat de mon exercice ---->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.1.1.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        input {
+            margin: 10px;
+        }
+        #gauche {
+            float: left;
+            width: 70%;
+            height: 1000px;
+            background-color: #EFECCA;
+            padding: 10px;
+        }
+        #droite {
+            background-color: #CEFFF8;
+            height: 1000px;
+            padding : 10px;
+            padding-left: 71%;
+        }
+    </style>
+
+</head>
+<body>
+<div id="gauche">
+</div>
+<div id="droite">
+    Utilisez ces boutons pour créer votre formulaire<br><br>
+    <button id="bt1">Label</button>
+    <button id="bt2">Zone de texte</button>
+    <button id="bt3">Bouton</button>
+
+
+
+
+    </div>
+</div>
+
+<script>
+    $('#bt1').click(function () {
+        var bout1 = '<section id="bout1val"><hr> Texte du label   <input class="label1" type="text"><input class="labelvalid" type="submit" value="OK"></section>'
+        $('#droite').append(bout1);
+        $('.labelvalid').click(function () {
+            var input1 = $('.label1').val();
+            $('#gauche').append('<span>' + input1 + '</span>');
+            $('#bout1val').remove();
+        });
+    });
+
+
+    $('#bt2').click(function () {
+        var bout2 = '<section id="bout2val"><hr> id de la zone de texte   <input class="label2" type="text"><input class="idvalid" type="submit" value="OK"></section>'
+        $('#droite').append(bout2);
+        $('.idvalid').click(function () {
+            var input2 = '"' + $('.label2').val() + '"';
+            var labelhtml = '<input class="labelcoule" type="text" id=' + input2 + '>';
+            $('#gauche').append(labelhtml + '<br>');
+            $('#bout2val').remove();
+        });
+    });
+    $('#bt3').click(function () {
+        var bout3 = '<section id="bout3val"><hr> Texte du bouton   <input class="label3" type="text"><input class="buttvalid" type="submit" value="OK"></section>'
+        $('#droite').append(bout3);
+        $('.buttvalid').click(function () {
+            var input3 = $('.label3').val();
+            $('#gauche').append('<button>' + input3 + '</button><br>')
+            $('#bout3val').remove();
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
