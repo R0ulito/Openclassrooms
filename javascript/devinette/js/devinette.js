@@ -11,24 +11,24 @@ console.log("Bienvenue dans ce jeu de devinette !");
 var solution = Math.floor(Math.random() * 100) + 1;
 
 // Décommentez temporairement cette ligne pour mieux vérifier le programme
-console.log("(La solution est " + solution + ")");
+//console.log("(La solution est " + solution + ")");
 
 // TODO : complétez le programme
 var answer, token=0;
 function answerInput(){
     answer = parseInt(prompt('Devinez le nombre'));
 };
-
+alert('Bienvenue dans le jeu de devinette. J\'ai volontairement fait en sorte que les messages soient en pop-up plutôt qu\'en console.log(). Ceci afin d\'eviter les problèmes de placement de la fenêtre de la console suivant les résolutions');
 answerInput();
 token ++;
 while (token < 6) {
     if (answer < solution) {
-        if (answer == '' || isNaN(answer)) {
+        if (isNaN(answer)) {
             answerInput();
         }
         alert('C\'est plus');
-
-        console.log(token + "coups joués");
+        //Compteur implanté pour vérifier le bon fonctionnement du script. Vous pouvez le décommenter pour faire les vérifications.
+        //console.log(token + "coup(s) joués");
         answerInput();
         token ++;
                 
@@ -36,7 +36,8 @@ while (token < 6) {
         alert('C\'est moins');
 
         answerInput();
-        console.log(token + "coups joués");
+        //Compteur implanté pour vérifier le bon fonctionnement du script. Vous pouvez le décommenter pour faire les vérifications.
+        //console.log(token + "coup(s) joués");
         token ++;
     } else {
         break
@@ -44,10 +45,10 @@ while (token < 6) {
 }
 
 if (token >= 6 && answer !== solution){
-    alert('Vous avez perdu. La solution était: ' + solution);
+    alert('Nombre d\'essais dépassés. Vous avez perdu. La réponse était: ' + solution);
 }
 
 if (answer == solution ) {
-    alert('Vous avez trouvé en ' + token + ' coups! La réponse était: ' + solution);
+    alert('Vous avez trouvé en ' + token + ' coup(s)! La réponse était: ' + solution);
 }
 
