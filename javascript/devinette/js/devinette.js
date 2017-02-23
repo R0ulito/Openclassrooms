@@ -20,12 +20,13 @@ function answerInput(){
 };
 alert('Bienvenue dans le jeu de devinette. J\'ai volontairement fait en sorte que les messages soient en pop-up plutôt qu\'en console.log(). Ceci afin d\'eviter les problèmes de placement de la fenêtre de la console suivant les résolutions');
 answerInput();
+console.log(answer);
 token ++;
 while (token < 6) {
-    if (answer < solution) {
-        if (isNaN(answer)) {
-            answerInput();
-        }
+    if (isNaN(answer)) {
+        answerInput();
+        token ++;
+    }else if (answer < solution) {
         alert('C\'est plus');
         //Compteur implanté pour vérifier le bon fonctionnement du script. Vous pouvez le décommenter pour faire les vérifications.
         //console.log(token + "coup(s) joués");
