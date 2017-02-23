@@ -18,14 +18,14 @@ var answer, token=0;
 function answerInput(){
     answer = parseInt(prompt('Devinez le nombre'));
 };
-alert('Bienvenue dans le jeu de devinette. J\'ai volontairement fait en sorte que les messages soient en pop-up plutôt qu\'en console.log(). Ceci afin d\'eviter les problèmes de placement de la fenêtre de la console suivant les résolutions');
+alert('Bienvenue dans le jeu de devinette. \nJ\'ai volontairement fait en sorte que les messages soient en pop-up plutôt qu\'en console.log(). \nCeci afin d\'eviter les problèmes de placement de la fenêtre de la console suivant les résolutions');
 answerInput();
 console.log(answer);
 token ++;
 while (token < 6) {
     if (isNaN(answer)) {
         var strikeLeft = 6 - token;
-        alert('Veuillez, s\'il vous plaît, entrer une nombre entre 1 et 100. Il ne vous reste plus que ' + strikeLeft + ' coup(s)')
+        alert('Veuillez, s\'il vous plaît, entrer une nombre entre 1 et 100. \n Il ne vous reste plus que ' + strikeLeft + ' coup(s)')
         answerInput();
         token ++;
     }else if (answer < solution) {
