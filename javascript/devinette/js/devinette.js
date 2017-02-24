@@ -25,7 +25,7 @@ token ++;
 while (token < 6) {
     if (isNaN(answer)) {
         var strikeLeft = 6 - token;
-        alert('Veuillez, s\'il vous plaît, entrer une nombre entre 1 et 100. \n Il ne vous reste plus que ' + strikeLeft + ' coup(s)')
+        alert('Veuillez, s\'il vous plaît, entrer une nombre entre 1 et 100. \nIl ne vous reste plus que ' + strikeLeft + ' coup(s)')
         answerInput();
         token ++;
     }else if (answer < solution) {
