@@ -25,7 +25,7 @@ Tant que token < 6
 
 
 Si answer !== solution
-	afficher 'Nombre d'essais dï¿½passï¿½. La rï¿½ponse ï¿½tait solution"
+	afficher 'Nombre d'essais dépassé. La réponse était solution"
 
 Si answer === solution
-	afficher 'Vous avez trouvï¿½ ! La rï¿½ponse ï¿½tait solution"
+	afficher 'Vous avez trouvé ! La réponse était solution"
