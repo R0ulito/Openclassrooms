@@ -11,6 +11,7 @@ Tant que token < 6
 	
 	Si answer n'est pas un nombre
 		answerInput()
+		token ++
 
 	Sinon si answer > solution		
 		afficher "C'est moins"
@@ -24,7 +25,7 @@ Tant que token < 6
 
 
 Si answer !== solution
-	afficher 'Nombre d'essais dépassés. La réponse était solution"
+	afficher 'Nombre d'essais dï¿½passï¿½. La rï¿½ponse ï¿½tait solution"
 
 Si answer === solution
-	afficher 'Vous avez trouvé ! La réponse était solution"
+	afficher 'Vous avez trouvï¿½ ! La rï¿½ponse ï¿½tait solution"

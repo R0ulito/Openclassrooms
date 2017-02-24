@@ -28,7 +28,7 @@ while (token < 6) {
         alert('Veuillez, s\'il vous plaît, entrer une nombre entre 1 et 100. \nIl ne vous reste plus que ' + strikeLeft + ' coup(s)')
         answerInput();
         token ++;
-    }else if (answer < solution) {
+    } else if (answer < solution) {
         alert('C\'est plus');
         //Compteur implanté pour vérifier le bon fonctionnement du script. Vous pouvez le décommenter pour faire les vérifications.
         //console.log(token + "coup(s) joués");
@@ -48,7 +48,7 @@ while (token < 6) {
 }
 
 if (token >= 6 && answer !== solution){
-    alert('Nombre d\'essais dépassés. Vous avez perdu. La réponse était: ' + solution);
+    alert('Nombre d\'essais dépassé. Vous avez perdu. La réponse était: ' + solution);
 }
 
 if (answer == solution ) {
