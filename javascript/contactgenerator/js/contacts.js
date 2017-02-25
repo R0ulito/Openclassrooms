@@ -4,7 +4,7 @@ Activité : gestion des contacts
 
 // TODO : complétez le programme
 
-var contacts = [], loop, choices = ["\n0: Quitter le générateur", "1: Lister les contacts", "2: Ajouter un contact\r"];
+var contacts = [], loop, choices = ["\n0: Quitter le générateur", "1: Lister les contacts", "2: Ajouter un contact"];
 var Contact;
 Contact = {
     init: function (lastName, name) {
