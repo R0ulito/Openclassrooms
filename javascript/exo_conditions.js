@@ -157,6 +157,7 @@ function chiffre2lettre (chiffre) {
             console.log(diz2let + unit2let);
         } else {
             diz2let = tabteen[dizaine];
+            console.log(diz2let + unit2let);
         }
 
     }

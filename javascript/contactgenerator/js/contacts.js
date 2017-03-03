@@ -37,7 +37,6 @@ function choicesList() {
     for (var i=0; i < choices.length; i ++) {
         console.log(choices[i]);
     }
-
 }
 
 var contact1 = Object.create(Contact);
@@ -62,11 +61,4 @@ while (loop = true) {
     } else if (choice == 0) {
         break
     }
-
-
-
-
-
-
-
 }
