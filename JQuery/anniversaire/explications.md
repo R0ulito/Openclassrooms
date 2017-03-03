@@ -1,0 +1,1 @@
+Exercice final de l'activité "Introduction à JQuery" que je réalise pour faire une petite pause sur les autres activité en cours (la plupart en phase finale)
