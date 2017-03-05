@@ -1,0 +1,8 @@
+J'ai concu ce TP comme un 'troll' pour un ami dont ce n'est absolument pas l'anniversaire.
+
+Tout y est, les div qui apparaissent lors du clic, le changement d'image de fond, et la musique qui se lance.
+
+J'ai écris une fonction qui affiche la date et l'heure. Trouvée sur le forum d'openclassrooms
+J'ai aussi prévu un bouton pour stopper la musique qui risque d'être embêtante pour certains ;)
+
+Bonne correction
