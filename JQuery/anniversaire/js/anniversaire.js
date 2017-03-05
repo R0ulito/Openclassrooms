@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#blockthree').hide();
     $('#blocktwo').hide();
     $('#nyandiv').hide()
-    $('#nyansound').remove;
+    $('#nyansound').hide();
     $('#nyanfade').hide();
     
     $('#blockone').click(function(){
