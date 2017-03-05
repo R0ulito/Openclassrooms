@@ -1,3 +1,27 @@
 .bd {
     background-color: aqua;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#blockone {
+    margin-top: 5%;
+}
+div {
+    width: 50%;
+    margin: auto;
+}
+
+p {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border: inset;
+    border-color: black;
+
+    border-radius: 12px;
+}
+
+#nyanfade {
+    margin-left: 42%;
 }

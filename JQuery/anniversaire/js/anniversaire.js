@@ -1,7 +1,40 @@
 $(document).ready(function() {
     $('#lastblock').hide();
+    $('#blockthree').hide();
+    $('#blocktwo').hide();
+    $('#nyandiv').hide()
+    $('#nyansound').remove;
+    $('#nyanfade').hide();
+    
+    $('#blockone').click(function(){
+        $('#blocktwo').show();
+    });
+    
+    $('#blocktwo').click(function() {
+        $('#blockthree').show();
+    });
+    
+    $('#blockthree').click(function(){
+        $('#lastblock').show();
+    });
+
+    $('#lastblock').click(function(){
+        $('#blockone').hide();
+        $('#blocktwo').hide();
+        $('#blockthree').hide();
+        $('#lastblock').hide();
+        $('#nyandiv').show();
+        $('.bd').css('background-image','url("nyancat.jpg")');
+        $('#nyansound').show();
+        $('#nyanfade').show();
+    })
+    
+    $('#nyanfade').click(function(){
+        $('#nyansound').remove();
+    })
     
 });
+
 
 
 function compZero(nombre) {
@@ -17,7 +50,7 @@ function date_heure() {
     //Date
     const mois = new Array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
     const jours = new Array('dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi');
-    document.getElementById('date_heure').innerHTML += ' et nous sommes le ' + jours[infos.getDay()] + ' ' + infos.getDate() + ' ' + mois[infos.getMonth()] + ' ' + infos.getFullYear() + '.';
+    document.getElementById('date_heure').innerHTML += ' et nous sommes le ' + jours[infos.getDay()] + ' ' + infos.getDate() + ' ' + mois[infos.getMonth()] + ' ' + infos.getFullYear() + '. <br/> <span>Clique ICI !!!</span>';
 }
 
 
